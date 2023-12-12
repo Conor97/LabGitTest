@@ -73,6 +73,7 @@ public class Lab10 {
             year = scan.nextLine();                 //Added a while loop to catch an invalid year input
         } 
 
+        //Print date
         System.out.println("Current date: "+day+"/"+month+"/"+year);  //Removed chain of if/else statements as they were not needed
     }
 
