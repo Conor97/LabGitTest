@@ -67,7 +67,7 @@ public class Lab10 {
 
         System.out.println("Enter the current year: ");
         String year = scan.nextLine();   //Created a variable to represent the year
-        while(year.length() < 4)
+        while(year.length() < 4 || year.length() > 4)
         {
             System.out.println("Invalid year");
             year = scan.nextLine();                 //Added a while loop to catch an invalid year input
