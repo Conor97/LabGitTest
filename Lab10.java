@@ -5,6 +5,7 @@ public class Lab10 {
     static Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
+        
         Q1();
         Q2();
         Q3();
@@ -12,12 +13,12 @@ public class Lab10 {
         scan.close();
     }
 
-    public static void Q1() 
-    {    
-        while(true) {
+    public static void Q1() {
+        while (true) {
 
-            //Variables can be created all at once at the start of the method and are given more descriptive name
-            double sideA = 0, sideB = 0, radius = 0;                                
+            // Variables can be created all at once at the start of the method and are given
+            // more descriptive name
+            double sideA = 0, sideB = 0, radius = 0;
             System.out.println("Pick a shape: square, rectangle, circle (or 'q' to quit)");
             String input = scan.nextLine();
 
@@ -75,7 +76,7 @@ public class Lab10 {
         }
 
         // Print date
-        System.out.println("Current date: " + day + "/" + month + "/" + year); // Removed chain of if/else statements                                                                     
+        System.out.println("Current date: " + day + "/" + month + "/" + year); // Removed chain of if/else statements
     }
 
     public static void Q3() {
@@ -83,11 +84,11 @@ public class Lab10 {
         int n = Integer.parseInt(scan.nextLine());
         int counter = 0;
 
-        //Used proper indentation
+        // Used proper indentation
         for (int i = 0; i < n; i++) {
-            if (i < 2)  {
+            if (i < 2) {
                 continue;
-            } 
+            }
             boolean check = true; // Removed else check
 
             for (int j = 2; j * j <= i; j++) {
@@ -105,26 +106,24 @@ public class Lab10 {
     }
 
     public static void Q4() {
-        Random rng = new Random();
-
-        String next;
-        System.out.println(
-                "Q4: Let's play a game. Type \"A\" to attack, \"B\" to buff your next attack. Kill the enemy to win!");
-        System.out.println(
-                "Q4: You must roll higher than the enemy armor class (12) to hit. Roll 20 for a critical hit!");
+        Random rng = new Random();  //Fixed indentation
+        System.out.println("Q4: Let's play a game. Type \"A\" to attack, \"B\" to buff your next attack. Kill the enemy to win!");     
+        System.out.println("Q4: You must roll higher than the enemy armor class (12) to hit. Roll 20 for a critical hit!");     
         System.out.println("Q4: Your damage is 2-16 (2d8)");
 
         int enemyHP = 100;
         int a = 0;
-
         boolean check = false;
+
         while (true) {
 
             boolean doAttack = false;
             boolean check2 = false;
             while (!check2) {
-                next = scan.nextLine();
+
+                String next = scan.nextLine();
                 check2 = true;
+
                 switch (next) {
                     case "A", "a":
                         doAttack = true;
@@ -140,6 +139,7 @@ public class Lab10 {
             }
 
             if (doAttack) {
+                
                 a++;
                 int attackRoll = rng.nextInt(20) + 1;
                 int damage = 0;
