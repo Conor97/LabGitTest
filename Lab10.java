@@ -82,22 +82,19 @@ public static void Q3() {
     int n = Integer.parseInt(scan.nextLine());
     int counter = 0;
     for (int i = 0; i < n; i++) {
-    if (i < 2)
-    continue;
-    boolean check = true;
+        if (i < 2)      
+        continue;
+        boolean check = true;   //Removed else check
 
     for (int j = 2; j * j <= i; j++) {
     if (i % j == 0) {
-    check = false;
-    break;
-    } else {
-
-    }
+        check = false;
+        break;
+    } 
     }
         if (check == true) {
-        counter++;
-        } 
-        else {}
+            counter++;
+        }                       //Removed else check
     }
 
         System.out.println("There are: " + counter + " primes between 0 and " + n);
