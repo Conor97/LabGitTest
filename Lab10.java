@@ -47,7 +47,7 @@ public class Lab10 {
             }
         }
     }
-
+    
     public static void Q2() {
         System.out.println("Q2: Enter the current day (1-31): ");
         int day = Integer.parseInt(scan.nextLine());    //Changed variable name to day
